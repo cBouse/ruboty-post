@@ -27,6 +27,8 @@ WEBHOOK_URI - You must set your WEBHOOK URI
 
 ## Example
 
+If you receive a channel name like ##hoge, it's must be private channel.
+
 ```
 > @ruboty post #general bar
 You posted to #general

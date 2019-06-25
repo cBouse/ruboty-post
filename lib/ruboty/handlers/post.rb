@@ -23,18 +23,13 @@ module Ruboty
       end
 
       def post(message)
-        if message[:channel].start_with?('#') then
-          message.reply('Are you sure about the channel name?')
-          return
-        end
-
-        unless message[:username] then
+        unless message[:username]
           username = message.original[:mention_to][0]['name']
         else
           username = message[:username]
         end
 
-        unless message[:icon] then
+        unless message[:icon]
           icon = message.original[:mention_to][0]['image_original']
         else
           icon = message[:icon]
@@ -44,7 +39,7 @@ module Ruboty
         if http_request?(params)
           message.reply("You sent to \##{message[:channel]}")
         else
-          message.reply("Error")
+          message.reply("Sorry! I could not post your message.")
         end
       end
 
