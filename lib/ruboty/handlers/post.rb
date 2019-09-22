@@ -7,8 +7,8 @@ module Ruboty
     class Post < Base
       env :WEBHOOK_URI, 'WEBHOOK URI of your workstation', optional: false
 
-      on /post (?<channel>\S*) ((?<username>\S*) )?((?<icon>:.*:) )?(?<text>.*)/, name: 'post', description: 'Send message to other channel'
-      on /anonymous (?<channel>\S*) (?<text>.*)/, name: 'anonymous', description: 'Send message to other channel as anonymous'
+      on /post (?<channel>\S*) ((?<username>\S*) )?((?<icon>:.*:) )?(?<text>.*)/m, name: 'post', description: 'Send message to other channel'
+      on /anonymous (?<channel>\S*) (?<text>.*)/m, name: 'anonymous', description: 'Send message to other channel as anonymous'
 
 
       def anonymous(message)
