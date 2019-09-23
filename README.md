@@ -15,8 +15,8 @@ gem 'ruboty-post', '=<version>', github: "cBouse/ruboty-post.git"
 ## Usage
 
 ```
-@ruboty post <channel> <username(optional)> <icon(optional)> <message>
-@ruboty anonymous <channel> <message>
+ruboty post <channel> <username(optional)> <icon(optional)> <message>
+ruboty anonymous <channel> <message>
 ```
 
 ## Env
@@ -30,10 +30,10 @@ WEBHOOK_URI - You must set your WEBHOOK URI
 If you receive a channel name like ##hoge, it's must be private channel.
 
 ```
-> @ruboty post #general bar
+> ruboty post #general bar
 You posted to #general
-> @ruboty post #general foo :bar: hoge
+> ruboty post #general foo :bar: hoge
 You posted to #general
-> @ruboty anonymous #general hoge
+> ruboty anonymous #general hoge
 You posted to #general as anonymous
 ```
