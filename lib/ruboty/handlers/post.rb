@@ -48,7 +48,7 @@ module Ruboty
       def http_request?(params)
         uri = URI.parse(ENV['WEBHOOK_URI'])
         http = Net::HTTP.new(uri.host, uri.port)
-        http.use_ssl = TRUE
+        http.use_ssl = true
 
         http.start do
           request = Net::HTTP::Post.new(uri.path)
